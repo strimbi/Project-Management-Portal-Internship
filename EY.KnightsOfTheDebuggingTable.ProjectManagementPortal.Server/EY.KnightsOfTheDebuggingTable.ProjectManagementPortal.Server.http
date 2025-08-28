@@ -1,0 +1,54 @@
+@EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress = https://localhost:7043
+
+// @name login
+POST {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/auth/login?useCookies=true&useSessionCookies=true
+Content-Type: application/json
+{
+    "email": "marcela@fd",
+    "password": "Knights12!"  
+}
+###
+
+POST {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/auth/register
+Content-Type: application/json
+{
+    "email": "marcela@fd",
+    "password": "Knights12!"
+}
+
+###
+
+POST {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/api/projects/98A15E0D-94E0-409A-B993-D8E880B2C4B5/resources
+Content-Type: application/json
+{
+    "firstName": "Marcela",
+    "lastName": "Fodor",
+    "role": "Developer",
+    "userId": "d77fee51-baff-4796-8e39-b112725b4ef8",
+    "projectId": "98A15E0D-94E0-409A-B993-D8E880B2C4B5",
+    "status": "Available",
+    "department": "D1"
+}
+
+###
+
+POST {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/auth/register
+Content-Type: application/json
+{
+    "email": "marcela@fd",
+    "password": "Knights12!"
+}
+
+###
+
+POST {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/auth/logout
+Content-Type: application/json
+{
+}
+###
+
+GET {{EY.KnightsOfTheDebuggingTable.ProjectManagementPortal.Server_HostAddress}}/api/weatherforecast
+Accept: application/json
+###
+
+
